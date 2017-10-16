@@ -62,7 +62,7 @@ public class PdfGenerator {
 		out.close();
 	}
 	
-	public static void generate1(String htmlStr, OutputStream out) throws IOException, DocumentException {
+	public static void generatePlus(String htmlStr, OutputStream out) throws IOException, DocumentException {
 		final String charsetName = "UTF-8";
 		
 		Document document = new Document(PageSize.A4, 30, 30, 30, 30);

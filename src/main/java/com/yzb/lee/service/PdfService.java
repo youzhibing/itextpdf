@@ -1,79 +1,35 @@
 package com.yzb.lee.service;
 
 import java.io.IOException;
-import java.io.StringWriter;
-import java.io.Writer;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-import com.yzb.lee.util.TemplateUtil;
-
-import freemarker.template.Configuration;
-import freemarker.template.Template;
-import freemarker.template.TemplateException;
+import com.yzb.lee.entity.User;
 
 public class PdfService {
 
-	public String getContent() throws IOException {
+	public Map<String, Object> getContent() throws IOException {
 
-		Map<String, Object> valueMap = new HashMap<String, Object>();
-		valueMap.put("xy_no", "11");
-		valueMap.put("jklist", "11");
-
-		valueMap.put("jf_loginName", "12");
-		valueMap.put("jf_name", "11");
-		valueMap.put("jf_card", "11");
-		valueMap.put("yf_loginName", "11");
-
-		valueMap.put("yf_card", "11");
-		valueMap.put("yf_realName", "11");
-		valueMap.put("sf", "11");
-		valueMap.put("bf_companyName", "11");
-		valueMap.put("bf_address", "11");
-
-		valueMap.put("yq_rate", "11");
-		valueMap.put("wyj_rate", "11");
-
-		valueMap.put("jk_jkyt", "11");
-		valueMap.put("jk_money_xx", "11");
-		valueMap.put("jk_money_dx", "11");
-
-		valueMap.put("jk_zmoney", "11");
-		valueMap.put("jk_zmoney_dx", "11");
-
-		valueMap.put("bdxq_type", "11");
-
-		valueMap.put("jk_rate", "11");
-
-		valueMap.put("jk_jkqx", "11");
-		valueMap.put("jk_dqr", "11");
-		valueMap.put("jk_hkqs", "11");
-		valueMap.put("jk_hkr", "11");
-		valueMap.put("jk_ksr", "11");
-
-		valueMap.put("hklist", "11");
-		valueMap.put("site_name", "11");
-		valueMap.put("site_domain", "11");
-		valueMap.put("jxts", "11");
-
-		Configuration cfg = new Configuration();
-		Template template = new Template("四方借款协议", TemplateUtil.getTemplate(), cfg);
+		// 从数据库中获取数据， 出于演示目的， 这里数据不从数据库获取， 而是直接写死
 		
-		String htmlContent = "";
-		try {
-			Writer writer = new StringWriter();  
-            //数据填充模板  
-            template.process(valueMap, writer);  
-            //设置输出文件内容及路径  
-            htmlContent = writer.toString();  
-		} catch (TemplateException e) {
-			e.printStackTrace();
-		}
-		return htmlContent;
-	}
+		Map<String, Object> variables = new HashMap<String, Object>();
 
-	public String getName() {
-		return "四方借款协议";
+		List<User> userList = new ArrayList<User>();
+
+		User tom = new User("Tom", 19, 1);
+		User amy = new User("Amy", 28, 0);
+		User leo = new User("Leo", 23, 1);
+
+		userList.add(tom);
+		userList.add(amy);
+		userList.add(leo);
+
+		variables.put("title", "用户列表");
+		variables.put("userList", userList);
+		
+		return variables;
 	}
 	
 }

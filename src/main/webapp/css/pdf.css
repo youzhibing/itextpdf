@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+h1 {
+	text-align: center;
+}
+table {
+	width: 100%;
+	border: green dotted;
+	border-width: 2 0 0 2
+}
+
+td {
+	border: green dotted;
+	border-width: 0 2 2 0
+}

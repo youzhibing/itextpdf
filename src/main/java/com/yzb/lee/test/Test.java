@@ -34,7 +34,7 @@ public class Test {
 			String htmlStr = HtmlGenerator.generate("template.html", variables);
 
 			OutputStream out = new FileOutputStream(outputFile);
-			PdfGenerator.generate1(htmlStr, out);
+			PdfGenerator.generatePlus(htmlStr, out);
 
 		} catch (Exception ex) {
 			ex.printStackTrace();
