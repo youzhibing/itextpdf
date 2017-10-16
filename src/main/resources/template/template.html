@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>${title}</title>
+<link type="text/css" rel="stylesheet" href="css/pdf.css" />
+<style>
+@page {
+	size: 8.5in 11in;
+	@
+	bottom-center
+	{
+		content
+		:
+		"page "
+		counter(
+		page
+		)
+		" of  "
+		counter(
+		pages
+		);
+	}
+}
+</style>
+</head>
+<body>
+	<h1>Just a blank page.</h1>
+	<div style="page-break-before: always;">
+		<div align="center">
+			<h1>${title}</h1>
+			<img alt="加载中..." src="images/aloner.jpg" />
+		</div>
+		<table>
+			<tr>
+				<td><b>Name</b></td>
+				<td><b>Age</b></td>
+				<td><b>Sex</b></td>
+			</tr>
+			<#list userList as user>
+			<tr>
+				<td>${user.name}</td>
+				<td>${user.age}</td>
+				<td><#if user.sex = 1> male <#else> female </#if></td>
+			</tr>
+			</#list>
+		</table>
+	</div>
+	<div>
+		<a href="https://www.baidu.com/" target="_blank">百度</a>
+	</div>
+</body>
+</html>
