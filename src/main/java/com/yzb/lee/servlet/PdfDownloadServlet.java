@@ -132,11 +132,10 @@ public class PdfDownloadServlet extends HttpServlet {
 		htmlContext.setImageProvider(new AbstractImageProvider() {
 
 			// String rootPath = servletContext.getRealPath("/");
-			String rootPath = "";
 
 			@Override
 			public String getImageRootPath() {
-				return rootPath;
+				return "";
 			}
 
 			@Override
