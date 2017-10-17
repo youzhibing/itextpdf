@@ -9,3 +9,8 @@
 	工程部署后，请求地址：http://localhost:8080/itextpdf/pdfServlet
 	文件路径：pdf.css在webapp/css/目录下，aloner.jpg在webapp/images/目录下， 模板文件是resources/template/webTemplate.html
 	此时css文件、image文件与工程部署在同一个web容器中， 文件路径的获取与之前有所不同
+	
+3、css、image等文件放到单独的文件服务器上
+	出于简单的演示效果，文件服务器与工程服务器还是同一个， css与image的链接方式与之前有所不同，可以看成是两个服务器
+	工程部署后，请求地址：http://localhost:8080/itextpdf/pdfDownloadServlet
+	文件路径：pdf.css、aloner.jpg在文件服务器上，写文件服务器的访问路径， 模板文件是resources/template/fileTemplate.html

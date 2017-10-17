@@ -10,8 +10,18 @@
 		<description></description>
 		<servlet-class>com.yzb.lee.servlet.PdfServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>pdfDownloadServlet</servlet-name>
+		<display-name>pdfDownloadServlet</display-name>
+		<description></description>
+		<servlet-class>com.yzb.lee.servlet.PdfDownloadServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>pdfServlet</servlet-name>
 		<url-pattern>/pdfServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>pdfDownloadServlet</servlet-name>
+		<url-pattern>/pdfDownloadServlet</url-pattern>
 	</servlet-mapping>
 </web-app>
