@@ -19,11 +19,14 @@
 			<artifactId>xmlworker</artifactId>
 			<version>5.5.1</version>
 		</dependency>
+		
+		<!-- 支持中文 -->
 		<dependency>
 			<groupId>com.itextpdf</groupId>
 			<artifactId>itext-asian</artifactId>
 			<version>5.2.0</version>
 		</dependency>
+		<!-- 支持css样式渲染 -->
 		<dependency>
 			<groupId>org.xhtmlrenderer</groupId>
 			<artifactId>flying-saucer-pdf-itext5</artifactId>
@@ -36,7 +39,6 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.4</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>junit</groupId>
