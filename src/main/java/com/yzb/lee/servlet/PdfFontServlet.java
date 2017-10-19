@@ -63,6 +63,7 @@ public class PdfFontServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		this.doPost(request, response);
@@ -72,6 +73,7 @@ public class PdfFontServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		response.setCharacterEncoding(CHARSET_NAME);
@@ -114,10 +116,11 @@ public class PdfFontServlet extends HttpServlet {
 						Font font = null;
 						if (fontname == null) {
 							//字体  
-				            String font_cn = getChineseFont();  
+				            String fontCn = getChineseFont();  
 				            BaseFont bf;
 							try {
-								bf = BaseFont.createFont(font_cn+",1", //注意这里有一个,1  
+								//注意这里有一个,1 
+								bf = BaseFont.createFont(fontCn+",1", 
 								         BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
 								font = new Font(bf, size, style);
 							} catch (DocumentException e) {

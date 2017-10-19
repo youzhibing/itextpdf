@@ -61,6 +61,7 @@ public class PdfDownloadServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		this.doPost(request, response);
@@ -70,6 +71,7 @@ public class PdfDownloadServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		response.setCharacterEncoding(CHARSET_NAME);
@@ -110,7 +112,8 @@ public class PdfDownloadServlet extends HttpServlet {
 					public Font getFont(String fontname, String encoding,
 							float size, final int style) {
 						if (fontname == null) {
-							fontname = "SimSun"; // 操作系统需要有该字体, 没有则需要安装; 当然也可以将字体放到项目中， 再从项目中读取
+							// 操作系统需要有该字体, 没有则需要安装; 当然也可以将字体放到项目中， 再从项目中读取
+							fontname = "SimSun";
 						}
 						return super.getFont(fontname, encoding, size, style);
 					}

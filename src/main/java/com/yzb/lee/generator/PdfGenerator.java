@@ -77,7 +77,8 @@ public class PdfGenerator {
                     public Font getFont(String fontname, String encoding,
                                         float size, final int style) {
                         if (fontname == null) {
-                            fontname = "SimSun";        // 操作系统需要有该字体, 没有则需要安装; 当然也可以将字体放到项目中， 再从项目中读取
+                        	// 操作系统需要有该字体, 没有则需要安装; 当然也可以将字体放到项目中， 再从项目中读取
+                            fontname = "SimSun";        
                         }
                         return super.getFont(fontname, encoding, size,
                                 style);
@@ -103,7 +104,6 @@ public class PdfGenerator {
         	
             @Override
             public String getImageRootPath() {
-                //return getServletContext().getRealPath("/");
             	return rootPath;
             }
 
@@ -114,7 +114,8 @@ public class PdfGenerator {
                 }
                 try {
                     Image image = Image.getInstance(new File(rootPath, src).toURI().toString());
-                    image.setAbsolutePosition(400, 400);		//  图片位置
+                    // 图片显示位置
+                    image.setAbsolutePosition(400, 400);		
                     if (image != null) {
                         store(src, image);
                         return image;

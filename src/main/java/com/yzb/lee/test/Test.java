@@ -16,7 +16,7 @@ public class Test {
 	public static void main(String[] args) {
 		try {
 			String outputFile = "D:\\sample.pdf";
-			Map<String, Object> variables = new HashMap<String, Object>();
+			Map<String, Object> variables = new HashMap<String, Object>(3);
 
 			List<User> userList = new ArrayList<User>();
 

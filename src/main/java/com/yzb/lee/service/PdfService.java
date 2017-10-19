@@ -14,7 +14,7 @@ public class PdfService {
 
 		// 从数据库中获取数据， 出于演示目的， 这里数据不从数据库获取， 而是直接写死
 		
-		Map<String, Object> variables = new HashMap<String, Object>();
+		Map<String, Object> variables = new HashMap<String, Object>(3);
 
 		List<User> userList = new ArrayList<User>();
 

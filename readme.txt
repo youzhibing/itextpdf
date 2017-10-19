@@ -19,3 +19,8 @@
 	工程部署后，请求地址：http://localhost:8080/itextpdf/pdfFontServlet
 	文件路径：pdf.css、aloner.jpg在文件服务器上，写文件服务器的访问路径， 模板文件是resources/template/fileTemplate.html
 	字体文件路径：resources/font/目录下
+
+5、阿里巴巴code review
+	阿里巴巴代码检视后，代码优化；
+	个人认为有可取的，但不是全部都可取
+	eclipse插件地址：https://p3c.alibaba.com/plugin/eclipse/update
